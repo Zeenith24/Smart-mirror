@@ -1,0 +1,26 @@
+# Magic Mirror AI — Python Dependencies
+# Install with: pip install -r requirements.txt
+
+# Core
+opencv-python>=4.8.0      # Camera + face detection + overlay
+pyyaml>=6.0               # Config file parsing
+numpy>=1.24               # Frame processing
+
+# Text-to-Speech (offline — works without internet)
+pyttsx3>=2.90
+
+# Audio playback (used by edge-tts and gtts backends)
+pygame>=2.5.0
+
+# Speech Recognition (for conversational mode)
+SpeechRecognition>=3.10.0
+pyaudio>=0.2.13           # Microphone input for speech recognition
+
+# Microsoft Neural Voices (requires internet, much better voice quality)
+edge-tts>=6.1.9
+
+# ── Optional TTS Backends ──
+# Uncomment whichever you want to use:
+
+# Google TTS (requires internet, simple)
+# gtts>=2.4.0

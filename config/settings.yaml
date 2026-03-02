@@ -1,0 +1,55 @@
+# ─────────────────────────────────────────────
+#  Magic Mirror AI — Configuration
+#  Pub/Mall Installation Settings
+# ─────────────────────────────────────────────
+
+camera:
+  device_index: 0          # 0 = first webcam. Try 1 if wrong camera opens.
+
+face_detection:
+  scale_factor: 1.1        # Higher = faster but misses more faces
+  min_neighbors: 5         # Higher = fewer false positives
+  min_face_size: 80        # Minimum face pixel size to count (ignore tiny far-away faces)
+
+proximity:
+  mode: motion             # motion | always_on | gpio | http
+                           # "motion" uses the camera itself — no extra hardware needed
+  motion_threshold: 1500   # Higher = less sensitive to small movements
+  cooldown_seconds: 2.0    # Seconds to ignore re-triggers after one fires
+
+interaction:
+  cooldown_seconds: 10     # Seconds between spoken lines (don't annoy people!)
+  max_repeats_before_shuffle: 3
+  post_speak_pause: 2.0    # Extra pause after speaking before checking again
+  tone: pub_banter         # pub_banter | welcoming | mysterious | cheeky
+
+#tts:
+  #engine: pyttsx3          # pyttsx3 (offline) | edge-tts (online, better) | gtts (online)
+  #rate: 165                # Words per minute (pyttsx3 only)
+  #volume: 1.0              # 0.0 – 1.0
+  #voice_index: 0           # 0 = first system voice. Increase to try others.
+    # edge_voice: en-GB-RyanNeural   # British male — great for a pub!
+
+  # Used only when engine = edge-tts
+  # Full list: https://speech.microsoft.com/portal/voicegallery
+  tts:
+  engine: edge-tts         # Change from pyttsx3 to edge-tts
+  edge_voice: en-GB-RyanNeural  # Australian male - enthusiastic newsreader style
+
+  # Other good options:
+  #   en-GB-SoniaNeural          # British female
+  #   en-IE-ConnorNeural         # Irish male
+  
+
+overlay:
+  enabled: false            # Set false if no screen is attached to the mirror
+  fullscreen: false        # Set true for a display hidden behind the mirror glass
+  font_size: 48
+  bg_color: [0, 0, 0]     # Black background
+  text_color: [255, 215, 0] # Gold text
+
+speech_recognition:
+  enabled: true            # Set false to disable conversational mode
+  listen_timeout: 5.0      # Seconds to wait for user to start speaking
+  phrase_timeout: 3.0      # Seconds of silence = end of what user is saying
+  ambient_adjust: 1.0      # Seconds to calibrate for pub background noise on startup
