@@ -1,6 +1,28 @@
 # Magic Mirror AI 
 ### Pub/Mall Installation — Setup & Operating Guide
 
+
+Developed by:Charitha K R (https://github.com/Charitha-kr)  
+Hardware Integration: Harshit Ravi
+
+Interactive conversational mirror with AI-powered face detection and speech recognition.
+
+---
+
+## 🏆 Project Attribution
+
+**Software (100%):** [Charitha K R]
+- Complete Python application architecture
+- AI conversation engine with 190+ dialogue lines
+- Computer vision and speech recognition integration
+- Multi-platform hardware support framework
+
+**Hardware:** [Harshit Ravi]
+- Physical installation and wiring
+
+See [CONTRIBUTORS.md](CONTRIBUTORS.md) for detailed breakdown.
+
+---
 ** Conversational Mode! 🎤** The mirror can now listen and respond to what people say. See `CONVERSATIONAL_MODE.md` for setup.
 
 ---
